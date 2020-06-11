@@ -3,6 +3,7 @@ var thermostat = new Thermostat;
 
 $(document).ready(function(){
   updateTemp();
+  updateExternalTemp();
   $("#power-saving-status").html('on').css("background-color", "green");
 
   $("#temperature-up").click(function() {
@@ -42,3 +43,10 @@ function updateTemp() {
     $("#Temperature").css("background-color", "red")
   }
 }
+
+function updateExternalTemp() {
+  $.get("http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=abc5597e86100be39e5d15328031e161", function(getWeather) {
+    $("#externalTemperature").html(Math.round((getWeather.main.temp - 273.15) * 10)/10);
+    console.log(getWeather)
+  });
+};
