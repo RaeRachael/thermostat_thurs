@@ -38,5 +38,7 @@ function updateTemp() {
     $("#Temperature").css("background-color", "green")
   } else if (thermostat.energyUsage() === "Medium usage") {
     $("#Temperature").css("background-color", "black")
+  } else {
+    $("#Temperature").css("background-color", "red")
   }
 }
