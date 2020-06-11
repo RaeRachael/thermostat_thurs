@@ -37,6 +37,9 @@ Thermostat.prototype.turnPowerSaverOff = function () {
   return this.powerSavingMode = false;
 };
 Thermostat.prototype.turnPowerSaverOn = function () {
+  if (this.temperature > 25) {
+    this.temperature = 25;
+  }
   return this.powerSavingMode = true;
 };
 Thermostat.prototype.isMaxTemp = function() {
