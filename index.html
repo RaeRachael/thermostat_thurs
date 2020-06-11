@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css">
     <title> Our Thermostat </title>
   </head>
   <body>
     <section>
+      <div id="temps">
       <h1>Indoor temperature:<textarea id="Temperature" style="font-size:30px;color:white" rows="1" cols="2"></textarea></h1>
       <h1>Outdoor temperature:<textarea id="externalTemperature" style="font-size:30px" rows="1" cols="4"></textarea></h1>
-        <p>
+      </div>
+      <div id="temp_change">
           <button id="temperature-up">+</button>
           <button id="temperature-down">-</button><br>
-          <button id="temperature-reset">reset</button><br>
-          PSM <textarea id="power-saving-status" rows="1" cols="2"></textarea><br>
+          <button id="temperature-reset">reset</button>
+      </div>
+      <div id="PSM">
+          PSM <textarea id="power-saving-status" rows="1" cols="2"></textarea>
+      </div>
+      <div id="PSM_change">
           <button id="powersaving-on">PSM on</button>
           <button id="powersaving-off">PSM off</button>
-        </p>
+      </div>
     </section>
     <script src="jasmine/src/thermostat.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="   crossorigin="anonymous"></script>
