@@ -36,11 +36,11 @@ $(document).ready(function(){
 function updateTemp() {
   $("#Temperature").html(thermostat.currentTemp());
   if (thermostat.energyUsage() === "Low usage") {
-    $("#Temperature").css("background-color", "green")
+    $("#Temperature").css("color", "green")
   } else if (thermostat.energyUsage() === "Medium usage") {
-    $("#Temperature").css("background-color", "black")
+    $("#Temperature").css("color", "black")
   } else {
-    $("#Temperature").css("background-color", "red")
+    $("#Temperature").css("color", "red")
   }
 }
 
