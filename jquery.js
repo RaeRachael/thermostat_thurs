@@ -21,11 +21,13 @@ $(document).ready(function(){
 
   $("#powersaving-on").click(function() {
     thermostat.turnPowerSaverOn();
+    $("#power-saving-status").html('on');
     $("#Temperature").html(thermostat.currentTemp());
   });
 
   $("#powersaving-off").click(function() {
     thermostat.turnPowerSaverOff();
+    $("#power-saving-status").html('off');
   });
 
 });
