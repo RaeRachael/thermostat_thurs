@@ -2,32 +2,36 @@
 var thermostat = new Thermostat;
 
 $(document).ready(function(){
-  $("#Temperature").html(thermostat.currentTemp());
+  updateTemp();
+  $("#power-saving-status").html('on').css("background-color", "green");
 
   $("#temperature-up").click(function() {
     thermostat.up();
-    $("#Temperature").html(thermostat.currentTemp());
+    updateTemp();
   });
 
   $("#temperature-down").click(function() {
     thermostat.down();
-    $("#Temperature").html(thermostat.currentTemp());
+    updateTemp();
   });
 
   $("#temperature-reset").click(function() {
     thermostat.reset();
-    $("#Temperature").html(thermostat.currentTemp());
+    updateTemp();
   });
 
   $("#powersaving-on").click(function() {
     thermostat.turnPowerSaverOn();
-    $("#power-saving-status").html('on');
-    $("#Temperature").html(thermostat.currentTemp());
+    $("#power-saving-status").html('on').css("background-color", "green");
+    updateTemp();
   });
 
   $("#powersaving-off").click(function() {
     thermostat.turnPowerSaverOff();
-    $("#power-saving-status").html('off');
+    $("#power-saving-status").html('off').css("background-color", "red");;
   });
-
 });
+
+function updateTemp() {
+  $("#Temperature").html(thermostat.currentTemp());
+}
