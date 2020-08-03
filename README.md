@@ -1,5 +1,9 @@
 # Thermostat
+### Week 5 Afternoon Task - Main Aims
 
+* Learn Javascript
+* Build a responsive page using JQuery
+* Have a little bit of CSS and styling practice 
 
 
 ## Specification:
